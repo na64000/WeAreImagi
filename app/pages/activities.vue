@@ -65,7 +65,9 @@ const resetGradient = (index) => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-primary text-neutralWhite px-6 py-12">
+  <div
+    class="min-h-screen bg-primary text-neutralWhite px-6 py-12 max-w-7xl mx-auto"
+  >
     <div class="text-center mb-12">
       <h1 class="text-4xl font-bold text-neutralWhite drop-shadow-lg">
         Activities

@@ -1,56 +1,20 @@
 <template>
   <button
-    :class="[
-      'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background',
-      variantClasses[variant],
-      sizeClasses[size],
-      className,
-    ]"
-    v-bind="$attrs"
+    class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2"
   >
-    <slot />
+    <slot></slot>
   </button>
 </template>
 
 <script setup lang="ts">
-const props = withDefaults(
-  defineProps<{
-    variant?:
-      | "default"
-      | "destructive"
-      | "outline"
-      | "secondary"
-      | "ghost"
-      | "link"
-      | "accent"
-      | "glass";
-    size?: "default" | "sm" | "lg" | "xl" | "icon";
-    className?: string;
-  }>(),
-  {
-    variant: "default",
-    size: "default",
-  }
-);
-
-const variantClasses = {
-  default: "bg-primary text-primary-foreground hover:bg-primary/90",
-  destructive:
-    "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-  outline: "border border-input hover:bg-accent hover:text-accent-foreground",
-  secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-  ghost: "hover:bg-accent hover:text-accent-foreground",
-  link: "underline-offset-4 hover:underline text-primary",
-  accent: "bg-accent text-white hover:bg-accent/90",
-  glass:
-    "bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white transition-all duration-300",
-};
-
-const sizeClasses = {
-  default: "h-10 py-2 px-4",
-  sm: "h-9 px-3 rounded-md",
-  lg: "h-11 px-8 rounded-md",
-  xl: "h-12 px-8 rounded-xl",
-  icon: "h-10 w-10",
-};
+defineProps<{
+  variant?:
+    | "default"
+    | "destructive"
+    | "outline"
+    | "secondary"
+    | "ghost"
+    | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+}>();
 </script>

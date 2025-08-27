@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-08-25", // hilangkan warning Nitro
   devtools: { enabled: true },
+
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxt/image",

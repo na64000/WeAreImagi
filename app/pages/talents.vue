@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-primary text-white px-6 py-12">
+  <div class="min-h-screen bg-primary text-white px-6 py-12 max-w-7xl mx-auto">
     <div class="text-center mb-12">
       <h1 class="text-4xl font-bold text-neutral-100 drop-shadow-lg">
         Talents
